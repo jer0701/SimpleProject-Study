@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+    <head>
+		<!--声明当前页面的编码集：国际编码（utf-8）-->
+		<meta http-equiv="Content-Type" content="text/html"charset="UTF-8">
+		<title>百度一下，你就知道</title>
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+
+		<!--css/js-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{font-size:12px;font-family:"Microsoft yahei";color:#666;}
+			#box{width:100%;height:900px;}
+			/*top start*/
+			#box .top{width:100%;height:50px;}
+			#box .top ul{float:right;list-style:none;
+				/*ul下面所有的li距离顶部都有距离，那么就在ul上写style*/
+				line-height:50px;}
+			#box .top ul li{float:left;padding-right:20px;}
+			#box .top ul li a{color:#333;font-size:14px;font-weight:bold;}
+			#box .top .t_more{width:66px;height:22px;line-height:22px;text-align:center;background:#38f;color:#fff;text-decoration:none;display:block;margin-top:14px;}
+			#box .top ul li a:hover{color:#00c;}
+			#box .top .t_more:hover{color:#fff;text-decoration:underline;}
+			/*end top*/
+
+			/*center start*/
+			#box .center{width:100%;height:620px;padding-top:80px;}
+			#box .center .c_img{width:270px;height:129px;margin:0 auto;}
+			#box .center .c_input{width:640px;height:30px;border:2px solid #4791ff;margin:0 auto;position:relative;}
+			#box .center .c_input .c_txt{width:477px;height:30px;overflow:hidden;
+				border:none;outline:none;
+				padding-right:160px;
+				text-indent:8px;}
+			#box .center .c_input .c_bg{width:18px;height:16px;float:right;position:absolute;top:9px;left:510px;background:url("images/camera.png")no-repeat;}
+			#box .center .c_input .c_bg:hover{cursor:pointer;background-position:0px -20px;}
+			#box .center .c_input .c_btn{width:100px;height:33px;background:blue;float:right;text-align:center;line-height:32px;color:#fff;font-size:14px;position:absolute;top:-1px;left:541px;}
+			#box .center .c_input .c_btn a{text-decoration:none;color:#fff;}
+			#box .center .c_input .c_btn:hover{cursor:pointer;}
+			#list{width:541px;margin-top:0.2px;margin-left:-2px;/* border:1px solid #f0f0f0; */}
+			#list li{width:541px;height:25px;line-height:25px;background:#fff;list-style:none;}
+			#list li a{text-decoration:none;font-size:12px;display:block;text-indent:8px;color:#000;}
+			#list li a:hover{background:#ddd;}
+			/*end center*/
+
+			/*bottom start*/
+			#box .bottom{width:100%;height:230px;;}
+			#box .bottom .b_box{width:400px;height:40px;margin:0 auto;}
+			#box .bottom .b_box .b_up{width:400px;height:20px;}
+			#box .bottom .b_box .b_up .b_lh{width:63px;height:14px;display:inline;}
+			#box .bottom .b_box .b_up a{font-size:12px;color:#999;}
+			#box .bottom .b_box .b_up .b_sp{width:327px;height:14px;}
+			#box .bottom .b_box .b_down{padding-top:6px;height:16px;line-height:16px;}
+			#box .bottom .b_box .b_down a{text-decoration:none;color:#999;font-size:12px;}
+			#box .bottom .b_box .b_down a i{width:14px;height:16px;display:inline-block;background:url("images/police.png") no-repeat;margin-right:6px;margin-left:96px;}
+			#box .bottom .b_box .b_down a:hover{text-decoration:underline;}
+			
+			/*end bottom*/
+
+		</style>
+    </head>
+
+ <body>
+	<div id="box">
+		<div class="top">
+			<ul>
+				<li><a href="#">糯米</a></li>
+				<li><a href="#">新闻</a></li>
+				<li><a href="#">hao123</a></li>
+				<li><a href="#">地图</a></li>
+				<li><a href="#">视频</a></li>
+				<li><a href="#">贴吧</a></li>
+				<li><a href="#">登录</a></li>
+				<li><a href="#">设置</a></li>
+				<li><a href="#" class="t_more">更多产品</a></li>
+			</ul>
+		</div>
+
+		<div class="center">
+			<div class="c_img">
+				<img src="images/baidu.png" alt="baidu" width="270" height="129" />
+			</div>
+			<div class="c_input">
+				<input type="text" maxlength="100" class="c_txt" id="search"/>
+				<ul id="list">
+					<!-- <li><a href="">11111</a></li>
+					<li><a href="">22222</a></li>
+					<li><a href="">33333</a></li>
+					<li><a href="">44444</a></li> -->
+				</ul>
+				<div class="c_bg"></div>
+				<div class="c_btn" ><a href="#" id="bdSearch">百度一下</a></div>
+			</div>
+		</div>
+
+		<div class="bottom">
+			<div class="b_box">
+				<div class="b_up">
+					<p class="b_lh">
+						<a href="#">设置首页</a>
+					</p>
+					<span class="b_sp">
+						<span>©2016&nbsp;Baidu&nbsp;</span>
+						<a href="#">使用百度前必读</a>
+						<a href="#">意见反馈</a>
+						<span>京ICP证030173号&nbsp;</span>
+						<img src="images/copy_rignt.png" width="13" height="16"/>
+					</span>
+				</div>
+				<div class="b_down">
+					<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001">
+					<i></i>
+					京公网安备11000002000001号
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+			var oSearch = document.getElementById("search");
+			var oList = document.getElementById("list");
+			var oBdSerach = document.getElementById("bdSearch");
+			var oS;
+			var val;
+			oSearch.onkeyup = function(){
+				val = this.value;
+				oS = document.createElement('script');//相当于添加一个js文件
+				oS.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+val+"&cb=fly";
+				document.body.appendChild(oS);
+			};
+		
+			function fly( mJson ){
+				var s = mJson.s;
+				var l = s.length;
+				l = Math.min(4,l);
+				oList.innerHTML = '';
+				oList.style.cssText = "width:541px;margin-top:0.2px;margin-left:-2px;";
+				for (var i=0;i<l;i++ )
+				{
+					oList.innerHTML += '<li><a href="https://www.baidu.com/s?wd='+s[i]+'" target="_blank">'+ s[i] +'</a></li>';
+					oList.style.cssText += "border:1px solid #f0f0f0;";
+				}
+				//document.body.removeChild(oS);
+				oS.parentNode.removeChild(oS);
+
+			};
+
+			oBdSerach.onclick =function(){
+				this.href = "https://www.baidu.com/s?wd="+val;
+				this.setAttribute("target","_blank");
+			}
+
+			document.onclick = function(){
+				oList.innerHTML = '';
+				oList.style.cssText = "width:541px;margin-top:0.2px;margin-left:-2px;";
+			}
+
+
+
+	</script>
+ 
+ </body>
+</html>
